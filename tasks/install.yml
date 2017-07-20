@@ -40,7 +40,7 @@
   #  template: src=prometheus_default.j2 dest=/etc/default/prometheus
   #  notify: restart prometheus
 
-- name Create Prometheus Service in systemd
+- name: Create Prometheus Service in systemd
   template: src=prometheus.service.j2 dest=/etc/systemd/system/prometheus.service
   notify: start prometheus
 
