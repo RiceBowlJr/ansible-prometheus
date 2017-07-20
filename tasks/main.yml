@@ -1,4 +1,4 @@
 ---
 # tasks file for ansible-prometheus
 - include: install.yml
-- include: nginx.yml
+#- include: nginx.yml
