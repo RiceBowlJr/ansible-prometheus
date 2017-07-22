@@ -30,6 +30,7 @@
   raw: >
     wget -O {{ prometheus_dist_dir }}/prometheus-{{prometheus_version}}.linux-amd64.tar.gz https://github.com/prometheus/prometheus/releases/download/v{{prometheus_version}}/prometheus-{{prometheus_version}}.linux-amd64.tar.gz;
     tar xvf {{ prometheus_dist_dir }}/prometheus-{{prometheus_version}}.linux-amd64.tar.gz -C {{ prometheus_root_dir }} --strip=1;
+    rm -f /opt/prometheus/prometheus.yml
   when: prometheus_tar_gz.stat.exists == False
     
 - name: create prometheus config file

@@ -7,7 +7,7 @@ Type=simple
 WorkingDirectory={{prometheus_root_dir}}
 User=prometheus
 Group=prometheus
-ExecStart={{prometheus_root_dir}}prometheus -config.file={{prometheus_root_dir}}/prometheus.yml -log.level=info
+ExecStart={{prometheus_root_dir}}/prometheus -config.file={{prometheus_root_dir}}/prometheus.yml -log.level=info
 ExecReload=/bin/kill -SIGHUP $MAINPID
 ExecStop=/bin/kill -SIGINT $MAINPID
 
